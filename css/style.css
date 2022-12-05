@@ -1,0 +1,132 @@
+/* General */
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+:root {
+    --darker: #5F451D;
+    --interm: #7AAA86;
+    --lighter: #CFDAD2;
+    --almost: #7F7852;
+    --white: #E9F0E9;
+}
+
+body {
+    background-image: url(../images/full-bg.jpg);
+    background-size: cover;
+}
+
+button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    background-color: var(--white);
+    color: var(--darker);
+    border: 2px solid var(--lighter);
+    padding: .3rem .6rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: .4s;
+}
+
+button i {
+    color: var(--darker);
+    font-weight: bold;
+    pointer-events: none;
+}
+
+#edit-cancel {
+    width: auto;
+    margin-top: 1rem;
+}
+
+button:hover {
+    background-color: var(--darker);
+    color: var(--white);
+}
+
+button:hover i,
+#edit-cancel:hover {
+    color: var(--white);
+}
+
+input,
+select {
+    padding: 0.25rem 0.5rem;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Header To-do */ 
+#main {
+    padding: 1.5rem;
+    max-width: 450px;
+    margin: 3rem auto;
+    background-color: var(--white);
+    border-radius: 30px;
+    box-shadow: 1px 1px 10px 2px var(--white);
+}
+
+#main header {
+    text-align: center;
+    padding: 0 1rem 1rem;
+    border-bottom: 1px solid var(--darker);
+}
+
+/* Form To-do */
+#todo-form,
+#edit-form
+{
+    padding: 1rem;
+    border-bottom: 1px solid var(--darker);
+}
+
+#todo-form p,
+#edit-form p {
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.control-form {
+    display: flex;
+}
+
+.control-form input {
+    margin-right: 0.3rem;
+}
+
+/* List To-do*/ 
+
+.todo {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1rem 1rem;
+    border-bottom: 1px solid #ddd;
+    transition: 0.3s;
+  }
+  
+  .todo h3 {
+    flex: 1;
+    font-size: 0.9rem;
+  }
+  
+  .todo button {
+    margin-left: 0.4rem;
+  }
+  
+  .done {
+    background: var(--darker);
+  }
+  
+  .done h3 {
+    color: var(--white);
+    text-decoration: line-through;
+    font-style: italic;
+  }
